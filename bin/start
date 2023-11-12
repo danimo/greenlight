@@ -24,7 +24,8 @@ if [ "$RAILS_ENV" = "production" ]; then
   done
 fi
 
-rails assets:precompile
+rails db:create
+rails db:migrate:with_data
 
 if [ -n "$SUPERADMIN_MAIL" ]; then
   bundle exec rake "admin:super_admin[$SUPERADMIN_NAME,$SUPERADMIN_MAIL,$SUPERADMIN_PASSWORD]"
