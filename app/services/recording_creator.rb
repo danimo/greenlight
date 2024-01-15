@@ -25,6 +25,13 @@ class RecordingCreator
   def call
     meeting_id = @recording[:metadata][:meetingId] || @recording[:meetingID]
     room = Room.find_by(meeting_id:)
+    if room_id.nil?
+      # b3scale support: Answer is a base64 encoded array with meeting ID at index 1.
+      meeting_info = Base64.decode64(meeting_id)
+      meeting_id = JSON.parse(meeting_info)[1]
+      room = Room.find_by(meeting_id:)
+    end
+
     raise ActiveRecord::RecordNotFound if room.nil?
 
     @provider = room.user.provider
