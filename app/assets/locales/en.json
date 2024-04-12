@@ -272,9 +272,11 @@
       "administration": {
         "administration": "Administration",
         "terms": "Terms & Conditions",
+        "imprint": "Imprint",
         "privacy": "Privacy Policy",
         "privacy_policy": "Privacy Policy",
         "change_term_links": "Change the terms links that appears at the bottom of the page",
+        "change_imprint_link": "Change the imprint link that appears at the bottom of the page",
         "change_privacy_link": "Change the privacy link that appears at the bottom of the page",
         "helpcenter": "Help Center",
         "change_helpcenter_link": "Change the help center link that appears under the profile dropdown",
@@ -412,6 +414,7 @@
         "brand_image_updated": "The brand image has been updated.",
         "brand_image_deleted": "The brand image has been deleted.",
         "privacy_policy_updated": "The privacy policy has been updated.",
+        "imprint_updated": "The imprint link has been updated.",
         "helpcenter_updated": "The help center link has been updated.",
         "terms_of_service_updated": "The terms of service have been updated.",
         "maintenance_updated": "The maintenance banner has been updated."

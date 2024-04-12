@@ -42,6 +42,12 @@ export default function Footer() {
               { t('admin.site_settings.administration.privacy_policy') }
             </a>
           )}
+          { links?.Imprint
+            && (
+              <a className="ps-3" href={links?.Imprint} target="_blank" rel="noreferrer">
+                { t('admin.site_settings.administration.imprint') }
+              </a>
+            )}
       </Container>
     </footer>
   );

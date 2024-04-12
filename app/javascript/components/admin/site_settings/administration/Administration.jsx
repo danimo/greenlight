@@ -24,7 +24,7 @@ import useSiteSettings from '../../../../hooks/queries/admin/site_settings/useSi
 
 export default function Administration() {
   const { t } = useTranslation();
-  const { data: siteSettings } = useSiteSettings(['Terms', 'PrivacyPolicy', 'HelpCenter', 'Maintenance']);
+  const { data: siteSettings } = useSiteSettings(['Terms', 'PrivacyPolicy', 'HelpCenter', 'Maintenance', 'Imprint']);
 
   return (
     <>
@@ -53,6 +53,15 @@ export default function Administration() {
           id="privacyForm"
           mutation={() => useUpdateSiteSetting('PrivacyPolicy')}
           value={siteSettings?.PrivacyPolicy}
+        />
+      </Row>
+      <Row>
+        <h6> { t('admin.site_settings.administration.imprint') } </h6>
+        <p className="text-muted"> { t('admin.site_settings.administration.change_imprint_link') } </p>
+        <LinksForm
+          id="imprintForm"
+          mutation={() => useUpdateSiteSetting('Imprint')}
+          value={siteSettings?.Imprint}
         />
       </Row>
       <Row>

@@ -135,6 +135,7 @@ RSpec.describe Api::V1::Admin::TenantsController, type: :controller do
     Setting.find_or_create_by(name: 'PrimaryColorDark')
     Setting.find_or_create_by(name: 'BrandingImage')
     Setting.find_or_create_by(name: 'Terms')
+    Setting.find_or_create_by(name: 'Imprint')
     Setting.find_or_create_by(name: 'PrivacyPolicy')
     Setting.find_or_create_by(name: 'HelpCenter')
     Setting.find_or_create_by(name: 'RegistrationMethod')
@@ -184,6 +185,7 @@ RSpec.describe Api::V1::Admin::TenantsController, type: :controller do
           provider: },
         { setting: Setting.find_by(name: 'Terms'), value: '', provider: },
         { setting: Setting.find_by(name: 'PrivacyPolicy'), value: '', provider: },
+        { setting: Setting.find_by(name: 'Imprint'), value: '', provider: },
         { setting: Setting.find_by(name: 'RegistrationMethod'), value: SiteSetting::REGISTRATION_METHODS[:open], provider: },
         { setting: Setting.find_by(name: 'ShareRooms'), value: 'true', provider: },
         { setting: Setting.find_by(name: 'PreuploadPresentation'), value: 'true', provider: },
